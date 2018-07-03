@@ -1,0 +1,52 @@
+/*
+* {
+    padding: 0;
+    margin: 0;
+}
+*/
+
+:link {
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+}
+a:hover {
+    background: silver; /* Цвет фона под ссылкой */
+    color: white; /* Цвет ссылки */
+    padding: 15px;
+}
+.menu {
+    float: right;
+    padding-top: 20px;
+}
+.logo {
+    float: left;
+}
+.header {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul li {
+    display: inline;
+}
+footer {
+    text-align: center;
+}
+.logo h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+}
+.logo h1 span {
+    font-weight: normal;
+    display: block;
+}
+
+/*
+стилизуем меню , мейн и футер
+фотография в родительский блок
+ */
+
+

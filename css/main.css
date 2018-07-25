@@ -12,7 +12,6 @@
 }
 a:hover {
     background: silver; /* Цвет фона под ссылкой */
-    color: white; /* Цвет ссылки */
     padding: 15px;
 }
 .menu {
@@ -43,10 +42,3 @@ footer {
     font-weight: normal;
     display: block;
 }
-
-/*
-стилизуем меню , мейн и футер
-фотография в родительский блок
- */
-
-

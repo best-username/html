@@ -1,0 +1,167 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14.08.2018, 21:44:51
+    Author     : collapse
+*/
+
+.AddNewContact {
+    display: none;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 84vh;
+    background: gainsboro;
+    font-size: 18px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    color: green;
+    transition: all .3s;
+}
+
+.mainWrap {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    max-height: 90px;
+}
+.item:hover {
+    background: #ebebeb;
+}
+.fa-id-card {
+    font-size: 40px;
+}
+.list {
+ height: 350px;
+ overflow: auto;   
+}
+
+.btn {
+    display: block;
+}
+
+.btn i{
+    font-size: 40px; 
+    color: #47a1e6;
+}
+
+.phoneWrap {
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+.infoBlock {
+    float: left;
+    
+}
+.searchBlock {
+    float: right;
+}
+header {
+    height: 70px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #47a1e6;
+    color: white;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.mainContent {
+    overflow-y: scroll;
+}
+
+.inputSearch {
+    border-radius: 4px;
+}
+
+.tabBlock {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabBlock p {
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+.tabBlock p.active {
+    color: green;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+}
+
+.addBlock {
+    margin-top: 26px;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 25px;
+    border-bottom: 1px solid darkgrey;
+}
+
+.addBlock .addBlockBtnFav {
+    border: none;
+    border-radius: 45px;
+    margin-right: 16px;
+}
+
+.blockToAdd {
+    display: none;
+    height: 350px;
+}
+
+.blockToAdd label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blockToAdd button {
+    margin-top: 5px;
+}
+
+.blockToEdit label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blockToEdit button {
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

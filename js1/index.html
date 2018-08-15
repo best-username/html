@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+<div class="mainWrap">
+    <div class="phoneWrap">
+        <header>
+            <div class="wrapper">
+                <div class="infoBlock">Contacts</div>
+                <div class="searchBlock">
+                    <i class="fa fa-search"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="AddNewContact">
+                <div class="infoBlock">Add new contact</div>
+            </div>
+        </header>
+        <main>
+            <div class="list" id="list">
+        <div class="item" data-item="id_0"><i class="fas fa-id-card"></i><div class="desc"><p class="name">Andrew</p><p class="number">0995517991</p></div></div>
+        <div class="item" data-item="id_1"><i class="fas fa-id-card"></i><div class="desc"><p class="name">Somebody</p><p class="number">0661231232</p></div></div>
+            
+            </div>
+            <div class="blockToAdd" id="blockToAdd">
+                    <form class="formAdd" id="signInForm" name="signInForm">
+                        <label for="name">Name</label>
+                        <input type="text" name="nameAdd" id="nameAdd" class="fields">
+                        <label for="surname">Surname</label>
+                        <input type="text" name="surnameAdd" id="surnameAdd" class="fields">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phoneAdd" id="phoneAdd" class="fields">
+                        <button class="btn bg-success" id="addBtn" type="button">Save</button>
+                        <button class="btn bg-warning" id="cancelBtn" type="button">Cancel</button>
+                    </form>
+            </div>
+            <div class="blockToEdit" id="blockToEdit" style="display:none">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="editName" class="fields">
+                        <label for="surname">Surname</label>
+                        <input type="text" name="surname" id="editSurname" class="fields">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="editPhone" class="fields">
+                        <button id="EditBtn" type="button">Save</button>
+                        <button id="cancelEditBtn" type="button">Cancel</button>
+                    </form>
+            </div>
+        </main>
+        <footer>
+            <div class="btn add">
+                <i class="fas fa-user-plus"></i>
+            </div>
+        </footer>
+    </div>
+</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

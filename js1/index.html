@@ -12,46 +12,57 @@
 <div class="mainWrap">
     <div class="phoneWrap">
         <header>
-            <div class="wrapper">
+            <div class="wrapper" id="wrapper">
                 <div class="infoBlock">Contacts</div>
                 <div class="searchBlock">
-                    <i class="fa fa-search"></i>
-                    <i class="fas fa-ellipsis-v"></i>
+                    <i style="cursor: pointer;" onclick="showSearch()" class="fa fa-search"></i>
                 </div>
             </div>
             <div class="AddNewContact">
                 <div class="infoBlock">Add new contact</div>
             </div>
+            <div class="editContact">
+                <div class="infoBlock">Edit contact</div>
+                <div class="searchBlock">
+                    <i style="cursor: pointer;" id="remove" class="fas fa-trash" onclick="removeContact(this)"></i>
+                </div>
+            </div>
+            <div class="search" id="search">
+                <div style="float: left"><input type="text" id="inp" autofocus onkeyup="search_name()" title="Type a name"></div>
+                <div style="float: right"><i style="cursor: pointer;" onclick="showSearch()" class="fa fa-search"></i></div>
+            </div>
         </header>
         <main>
-            <div class="list" id="list">
-        <div class="item" data-item="id_0"><i class="fas fa-id-card"></i><div class="desc"><p class="name">Andrew</p><p class="number">0995517991</p></div></div>
-        <div class="item" data-item="id_1"><i class="fas fa-id-card"></i><div class="desc"><p class="name">Somebody</p><p class="number">0661231232</p></div></div>
-            
-            </div>
+            <div class="list" id="list"></div>
             <div class="blockToAdd" id="blockToAdd">
                     <form class="formAdd" id="signInForm" name="signInForm">
-                        <label for="name">Name</label>
-                        <input type="text" name="nameAdd" id="nameAdd" class="fields">
-                        <label for="surname">Surname</label>
-                        <input type="text" name="surnameAdd" id="surnameAdd" class="fields">
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phoneAdd" id="phoneAdd" class="fields">
-                        <button class="btn bg-success" id="addBtn" type="button">Save</button>
-                        <button class="btn bg-warning" id="cancelBtn" type="button">Cancel</button>
+                        <label for="nameAdd">Name</label>
+                        <input type="text" name="nameAdd" id="nameAdd" required>
+                        <label for="surnameAdd">Surname</label>
+                        <input type="text" name="surnameAdd" id="surnameAdd">
+                        <label for="phoneAdd">Phone</label>
+                        <input type="text" name="phoneAdd" id="phoneAdd" oninput="formatPhoneNumber (this)" required>
+                        <p>
+                            <button class="btn bg-success" id="addBtn" type="button">Save</button>
+                            <button class="btn bg-warning" id="cancelBtn" onclick="showMainPage()" type="button">Cancel</button>
+                        </p>
                     </form>
+                <p style="color: red;" id="errorAdd"></p>
             </div>
             <div class="blockToEdit" id="blockToEdit" style="display:none">
                     <form>
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="editName" class="fields">
-                        <label for="surname">Surname</label>
-                        <input type="text" name="surname" id="editSurname" class="fields">
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="editPhone" class="fields">
-                        <button id="EditBtn" type="button">Save</button>
-                        <button id="cancelEditBtn" type="button">Cancel</button>
+                        <label for="editName">Name</label>
+                        <input type="text" name="name" id="editName">
+                        <label for="editSurname">Surname</label>
+                        <input type="text" name="surname" id="editSurname">
+                        <label for="editPhone">Phone</label>
+                        <input type="text" name="phone" id="editPhone" oninput="formatPhoneNumber (this)" required>
+                        <p>
+                            <button class="btn bg-success" id="EditBtn" type="button">Save</button>
+                            <button class="btn bg-warning" id="cancelBtn" onclick="showMainPage()" type="button">Cancel</button>
+                        </p>
                     </form>
+                <p style="color: red;" id="errorEdit"></p>
             </div>
         </main>
         <footer>
@@ -63,5 +74,6 @@
 </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
-    </body>
+    </body>    
+    
 </html>

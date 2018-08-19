@@ -18,14 +18,14 @@ body {
     justify-content: center;
     height: 84vh;
     background: gainsboro;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p {
     font-family: Arial, sans-serif;
 }
 
-button {
+button, .item {
     cursor: pointer;
 }
 
@@ -35,7 +35,7 @@ button:hover {
 }
 
 .mainWrap {
-    width: 280px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,10 +45,14 @@ button:hover {
 .item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 20px 15px;
     max-height: 90px;
 }
+
+.desc {
+        padding-left: 10px;
+}
+
 .item:hover {
     background: #ebebeb;
 }
@@ -62,6 +66,18 @@ button:hover {
 
 .btn {
     display: block;
+}
+
+p .btn {
+    display: inline-block;
+}
+
+.editContact {
+    display: none;
+}
+
+.number {
+    font-size: 14px;
 }
 
 .btn i{
@@ -82,6 +98,19 @@ button:hover {
     float: left;
     
 }
+.search {
+    display: none;
+}
+
+.search input {
+    width: 190px;
+    background: transparent;
+    font-size: 16px;
+  padding: 0.25em;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
 .searchBlock {
     float: right;
 }
@@ -148,6 +177,11 @@ header {
 
 .blockToAdd button {
     margin-top: 5px;
+}
+
+.blockToEdit {
+    display: none;
+    height: 350px;
 }
 
 .blockToEdit label {

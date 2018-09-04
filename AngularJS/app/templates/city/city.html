@@ -1,0 +1,40 @@
+<div class="city" layout="row" ng-cloak>
+
+    <div layout="column" flex>
+        <div layout="column" class="description">
+            <h1 layout-align="center"><strong>{{vm.currentCity}}</strong></h1>
+            <h2><strong>Description: </strong></h2>
+            <p style="white-space: pre;">{{vm.cityDescription}}</p>
+        </div>
+
+        <md-content layout="column" flex layout-padding>
+            <div layout="column">
+                <table ng-table="vm.tableParams" class="table table-condensed table-bordered table-striped"
+                       show-filter="true">
+                    <tr ng-repeat="row in $data">
+                        <td title="'year'" filter="{ year: 'number'}" sortable="'year'">{{row.year}}</td>
+                        <td title="'month'" filter="{ month: 'number'}" sortable="'month'">{{row.month}}</td>
+                        <td title="'maximum temp'" filter="{ tmax: 'number'}" sortable="'tmax'">{{row.tmax}}</td>
+                        <td title="'minimum temp'" filter="{ tmin: 'number'}" sortable="'tmin'">{{row.tmin}}</td>
+                        <td title="'af'" filter="{ af: 'number'}" sortable="'af'">{{row.af}}</td>
+                        <td title="'rain'" filter="{ rain: 'number'}" sortable="'rain'">{{row.rain}}</td>
+                        <td title="'sun'" filter="{ sun: 'number'}" sortable="'sun'">{{row.sun}}</td>
+                    </tr>
+                </table>
+            </div>
+        </md-content>
+
+    </div>
+    <div>
+        <ul class="list-items">
+            <li ng-repeat="(cityName, cityInfo) in vm.cities.open"
+                ui-sref="city({city: cityName, stationInfo:{city: cityName, state: 'open', url: cityInfo.url}})">
+                <p> {{cityName | uppercase}} </p>
+            </li>
+            <li ng-repeat="(cityName, cityInfo) in vm.cities.closed"
+                ui-sref="city({city: cityName, stationInfo:{city: cityName, state: 'closed', url: cityInfo.url}})">
+                <p> {{cityName | uppercase}} </p>
+            </li>
+        </ul>
+    </div>
+</div>
